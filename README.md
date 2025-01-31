@@ -1,6 +1,15 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Google Authentification Page
+App: 
+  - The use of ThemeProvider and CssBaseline is good for consistent styling
+LoginLogic: 
+  - The logic for handling Google login is well-isolated from the UI in this component
+  - Using a custom hook (useLoading) effectively to manage loading states, which keeps the code reusable and clean
+  - There's a basic error-handling function (handleLoginError), which is essential for any auth flow
+LoginPage:
+  - The LoginPage component has a simple, centered layout with Material-UI components, which are responsive and visually appealing
+  - Integrating a CircularProgress loader improves the user experience
+Tests:
+  - Unit tests was written for components to make sure the code is written without bugs
 
 ## Available Scripts
 

@@ -1,18 +1,23 @@
 import React from 'react';
 import LoginPage from '../components/LoginPage';
 import { CredentialResponse } from '@react-oauth/google';
+import Cookies from "js-cookie";
 import UseLoading from '../hooks/UseLoading';
+import { useNavigate } from 'react-router-dom';
 
 const LoginLogic: React.FC = () => {
     const { startLoading, stopLoading, isLoading } = UseLoading();
+    const navigate = useNavigate();
 
-    const handleLoginSuccess = async (response: CredentialResponse) => {
+    const handleLoginSuccess = (response: CredentialResponse) => {
         stopLoading();
-        const token = response.credential; // Save token securely
-        console.log('Token:', token);
-        // Simulate async work
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        
+        if (response.credential) {
+            Cookies.set("authToken", response.credential, {expires: 1, secure: true, sameSite: "Strict"}); // Store token
+            navigate("/"); // Redirect to home
+        }
     };
+    
     
 
     const handleLoginError = () => { 

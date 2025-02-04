@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/KatyaMarush/TechiHire.git/static/js/main.d70efbd8.js",
-    "index.html": "/KatyaMarush/TechiHire.git/index.html",
-    "main.d70efbd8.js.map": "/KatyaMarush/TechiHire.git/static/js/main.d70efbd8.js.map"
+    "main.js": "/TechiHire/static/js/main.d70efbd8.js",
+    "index.html": "/TechiHire/index.html",
+    "main.d70efbd8.js.map": "/TechiHire/static/js/main.d70efbd8.js.map"
   },
   "entrypoints": [
     "static/js/main.d70efbd8.js"

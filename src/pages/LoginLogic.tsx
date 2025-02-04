@@ -3,11 +3,9 @@ import LoginPage from '../components/LoginPage';
 import { CredentialResponse } from '@react-oauth/google';
 import Cookies from "js-cookie";
 import UseLoading from '../hooks/UseLoading';
-import { useNavigate } from 'react-router-dom';
 
 const LoginLogic: React.FC = () => {
     const { startLoading, stopLoading, isLoading } = UseLoading();
-    const navigate = useNavigate();
 
     const handleLoginSuccess = (response: CredentialResponse) => {
         stopLoading();

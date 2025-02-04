@@ -5,15 +5,11 @@ import theme from "./theme/theme";
 import AppRoutes from "./components/AppRoutes";
 
 function App() {
-  console.log("App component is rendering!"); // 🔍 Debugging
   return (
-    // <ThemeProvider theme={theme}>
-    //   <CssBaseline />
-    //   <AppRoutes />
-    // </ThemeProvider>
-    <div style={{ color: "blue", fontSize: "30px" }}>
-      🚀 React is working!
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <AppRoutes />
+    </ThemeProvider>
   );
 }
 

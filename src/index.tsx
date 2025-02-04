@@ -5,8 +5,6 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 
 const clientId = 'YOUR_GOOGLE_CLIENT_ID';
 
-console.log("React is trying to load!"); // 🔍 Debugging
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

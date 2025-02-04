@@ -47,7 +47,6 @@ const LoginPage: React.FC<LoginPageProps> = ({
         ) : (
           <div role="button" aria-label="Login with Google" onClick={onGoogleLoginClick}>
             <GoogleLogin onSuccess={onLoginSuccess} onError={handleLoginError} />
-            Hello I am google auth that is not working
           </div>
         )}
       </Box>

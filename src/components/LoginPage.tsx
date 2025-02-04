@@ -46,7 +46,10 @@ const LoginPage: React.FC<LoginPageProps> = ({
           <CircularProgress />
         ) : (
           <div role="button" aria-label="Login with Google" onClick={onGoogleLoginClick}>
-            <GoogleLogin onSuccess={onLoginSuccess} onError={handleLoginError} />
+            <GoogleLogin 
+              onSuccess={onLoginSuccess} 
+              onError={handleLoginError}
+              ux_mode="popup" />
           </div>
         )}
       </Box>

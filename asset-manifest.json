@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/TechiHire/static/js/main.f3cfeab5.js",
+    "main.js": "/TechiHire/static/js/main.c18d9099.js",
     "index.html": "/TechiHire/index.html",
-    "main.f3cfeab5.js.map": "/TechiHire/static/js/main.f3cfeab5.js.map"
+    "main.c18d9099.js.map": "/TechiHire/static/js/main.c18d9099.js.map"
   },
   "entrypoints": [
-    "static/js/main.f3cfeab5.js"
+    "static/js/main.c18d9099.js"
   ]
 }

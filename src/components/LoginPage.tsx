@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Typography, Box, CircularProgress } from '@mui/material';
+import { Container, Typography, Box, CircularProgress, ButtonBase } from '@mui/material';
 import { GoogleLogin, CredentialResponse } from '@react-oauth/google';
 
 interface LoginPageProps {
@@ -45,12 +45,21 @@ const LoginPage: React.FC<LoginPageProps> = ({
         {isLoading ? (
           <CircularProgress />
         ) : (
-          <div role="button" aria-label="Login with Google" onClick={onGoogleLoginClick}>
+          <ButtonBase
+            onClick={onGoogleLoginClick}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "auto",
+              borderRadius: "4px",
+            }}
+          >
             <GoogleLogin 
               onSuccess={onLoginSuccess} 
               onError={handleLoginError}
               ux_mode="popup" />
-          </div>
+          </ButtonBase>
         )}
       </Box>
 

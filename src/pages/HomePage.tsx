@@ -8,8 +8,6 @@ const HomePage: React.FC = () => {
     const navigate = useNavigate();
 
     const handleLogout = () => {
-        // Remove auth token from storage
-        localStorage.removeItem("authToken");
         Cookies.remove("authToken");
 
         const googleUser = Cookies.get("googleUser"); // Retrieve Google user info
@@ -22,7 +20,6 @@ const HomePage: React.FC = () => {
 
         // Redirect to login
         navigate("/login");
-        window.location.reload(); // Ensure a full refresh to clear session
     };
 
     return (

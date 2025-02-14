@@ -16,7 +16,7 @@ const AppRoutes: React.FC = () => {
                 <Route path="/login" element={isAuthenticated() ? <Navigate to="/" replace /> : <LoginLogic />} />
                 
                 {/* Home Page (Protected Route) */}
-                <Route path="/" element={isAuthenticated() ? <HomePage /> : <Navigate to="/login" replace />} />
+                <Route path="/home" element={isAuthenticated() ? <HomePage /> : <Navigate to="/login" replace />} />
             </Routes>
         </Router>
     );

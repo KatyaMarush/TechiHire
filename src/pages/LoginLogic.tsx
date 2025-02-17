@@ -14,7 +14,8 @@ const LoginLogic: React.FC = () => {
         
         if (response.credential) {
             Cookies.set("authToken", response.credential, {expires: 1, secure: true, sameSite: "Strict"}); // Store token
-            navigate("/home"); // Redirect to home
+            navigate("/");
+
         }
     };
     

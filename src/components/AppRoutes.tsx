@@ -12,11 +12,8 @@ const AppRoutes: React.FC = () => {
     return (
         <Router>
             <Routes>
-                {/* If the user is logged in, redirect to home, else show login */}
+                <Route path="/" element={isAuthenticated() ? <HomePage /> : <Navigate to="/login" replace />} />
                 <Route path="/login" element={isAuthenticated() ? <Navigate to="/" replace /> : <LoginLogic />} />
-                
-                {/* Home Page (Protected Route) */}
-                <Route path="/home" element={isAuthenticated() ? <HomePage /> : <Navigate to="/login" replace />} />
             </Routes>
         </Router>
     );

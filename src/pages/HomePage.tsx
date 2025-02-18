@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
     const handleLogout = () => {
         Cookies.remove("authToken");
 
-        const googleUser = Cookies.get("googleUser"); // Retrieve Google user info
+        const googleUser = Cookies.get("googleUser");
         if (googleUser) {
             const { sub } = JSON.parse(googleUser);
             window.google?.accounts.id.revoke(sub, () => {
@@ -18,7 +18,6 @@ const HomePage: React.FC = () => {
             });
         }
 
-        // Redirect to login
         navigate("/login");
     };
 

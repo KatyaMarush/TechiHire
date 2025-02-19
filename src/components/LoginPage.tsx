@@ -58,7 +58,8 @@ const LoginPage: React.FC<LoginPageProps> = ({
             <GoogleLogin 
               onSuccess={onLoginSuccess} 
               onError={handleLoginError}
-              ux_mode="popup" />
+              ux_mode="popup"
+              useOneTap={false}/>
           </ButtonBase>
         )}
       </Box>

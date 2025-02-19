@@ -18,7 +18,9 @@ const HomePage: React.FC = () => {
             });
         }
 
-        navigate("/login");
+        setTimeout(() => {
+            navigate("/login", { replace: true });
+        }, 500);
     };
 
     return (
